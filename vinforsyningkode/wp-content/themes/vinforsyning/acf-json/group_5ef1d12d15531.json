@@ -1,0 +1,467 @@
+{
+    "key": "group_5ef1d12d15531",
+    "title": "Header indhold",
+    "fields": [
+        {
+            "key": "field_5ef1d13ff0402",
+            "label": "Top bar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f0c45009cd3c",
+            "label": "col-6",
+            "name": "col-6",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_2",
+            "end_column": 0
+        },
+        {
+            "key": "field_5f0c2c22418b1",
+            "label": "Mærkater",
+            "name": "credentials",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Tilføj ny",
+            "sub_fields": [
+                {
+                    "key": "field_5f0c2d9a418b2",
+                    "label": "Billede",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f0c2da0418b3",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "Link teksten anvendes ikke",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5ef1d192f0406",
+            "label": "col-6",
+            "name": "_copy",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_2",
+            "end_column": 0
+        },
+        {
+            "key": "field_5f0c2e3508bde",
+            "label": "Links",
+            "name": "top_bar_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Tilføj ny",
+            "sub_fields": [
+                {
+                    "key": "field_5f0c2e5c08bdf",
+                    "label": "Billede",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f0c2e6708be0",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "Hvis billede vælges anvendes link titel ikke",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5ef1d159f0403",
+            "label": "Menu",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ef1d182f0405",
+            "label": "col-12",
+            "name": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_1"
+        },
+        {
+            "key": "field_5ef1d164f0404",
+            "label": "Navigation Call to action",
+            "name": "nav_cta",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5ef1d196f0407",
+            "label": "col-12",
+            "name": "_copy",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_1"
+        },
+        {
+            "key": "field_5ef1d19df0408",
+            "label": "Vis søgebar",
+            "name": "show_search",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Vis",
+            "ui_off_text": "Skjul"
+        },
+        {
+            "key": "field_5ef1d1b2f0409",
+            "label": "Søgebar placeholder",
+            "name": "search_placeholder",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef1d19df0408",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f6c980380970",
+            "label": "Mobil Menu",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f6c982780971",
+            "label": "col-12",
+            "name": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_1",
+            "end_column": 0
+        },
+        {
+            "key": "field_5f6c987e80973",
+            "label": "Mobil Navigation Call to action",
+            "name": "nav_cta_mobile",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5f6c983280972",
+                    "label": "Call to action - Knap",
+                    "name": "nav_cta_mobile_btn",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5f6c9ce197d14",
+                    "label": "Ikon?",
+                    "name": "cta_mobile_icon_choice",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5f6c9c6d2c271",
+                    "label": "Ikon",
+                    "name": "icomoon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f6c9ce197d14",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "icomoon-select-element",
+                        "id": ""
+                    },
+                    "choices": {
+                        "icon-b2b": "B2B",
+                        "icon-baeredygtighed": "Bæredygtighed",
+                        "icon-cirkel": "Cirkel",
+                        "icon-eksperter": "Stjerner",
+                        "icon-eksport": "Eksport",
+                        "icon-flaske": "Flaske",
+                        "icon-stjerne": "Stjerne (tom)",
+                        "icon-fyldt-stjerne": "Stjerne",
+                        "icon-galleri": "Galleri",
+                        "icon-hjaelpe-hele-vejen": "Vej",
+                        "icon-kontodetaljer": "Dokumenter",
+                        "icon-kurv": "Kurv",
+                        "icon-leveringsadresse": "Addresse",
+                        "icon-links": "Ekstern link",
+                        "icon-log-ud": "Log ud",
+                        "icon-lup": "Lup",
+                        "icon-min-konto": "Profil",
+                        "icon-noegle": "Nøgle",
+                        "icon-oekonomi": "Økonomi",
+                        "icon-pil-hoejre": "Pil Højre",
+                        "icon-pil-op": "Pil op",
+                        "icon-play": "Play",
+                        "icon-pose": "Pose",
+                        "icon-produktkatalog": "Produkt katalog",
+                        "icon-skraeddersyet": "Menukort",
+                        "icon-smagning": "Menukort 2",
+                        "icon-skraldespand": "Skraldespand",
+                        "icon-sortiment": "Sortiment",
+                        "icon-statistik": "Statistik",
+                        "icon-vinglas": "Vinglas",
+                        "icon-vinpakker": "Vinpakke",
+                        "icon-vinrejser": "Kontakt",
+                        "icon-madpiktogram_Dessert": "Dessert",
+                        "icon-madpiktogram_Fisk": "Fisk",
+                        "icon-madpiktogram_Fuglevildt": "Fuglevildt",
+                        "icon-madpiktogram_Gris": "Gris",
+                        "icon-madpiktogram_Gryderet": "Gryderet",
+                        "icon-madpiktogram_Is": "Is",
+                        "icon-madpiktogram_Kaffe": "Kaffe",
+                        "icon-madpiktogram_Kalv": "Kalv",
+                        "icon-madpiktogram_Kylling": "Kylling",
+                        "icon-madpiktogram_Lam": "Lam",
+                        "icon-madpiktogram_Okse": "Okse",
+                        "icon-madpiktogram_Orientalsk": "Orientalsk",
+                        "icon-madpiktogram_Pasta": "Pasta",
+                        "icon-madpiktogram_Pizza": "Pizza",
+                        "icon-madpiktogram_Ravildt": "Råvildt",
+                        "icon-madpiktogram_Salat": "Salat",
+                        "icon-madpiktogram_Skaldyr": "Skaldyr",
+                        "icon-madpiktogram_Trte": "Tærte"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": true,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600953650
+}

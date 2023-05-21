@@ -1,0 +1,47 @@
+{
+    "modules":{
+        "Colors":"generate_package_colors",
+        "Menu Plus":"generate_package_menu_plus",
+        "Typography":"generate_package_typography"
+    },
+    "options":{
+        "generate_settings":{
+            "hide_title":true,
+            "hide_tagline":true,
+            "header_alignment_setting":"right",
+            "content_layout_setting":"one-container",
+            "nav_alignment_setting":"right",
+            "nav_position_setting":"nav-float-right",
+            "layout_setting":"no-sidebar",
+            "blog_layout_setting":"no-sidebar",
+            "single_layout_setting":"no-sidebar",
+            "text_color":"#000000",
+            "link_color":"#000000",
+            "link_color_hover":"#000000",
+            "background_color":"#ffffff",
+            "link_color_visited":"#000000",
+            "form_background_color":"#ffffff",
+            "form_border_color":"#ffffff",
+            "form_border_color_focus":"#ffffff",
+            "form_text_color":"#000000",
+            "form_text_color_focus":"#000000",
+            "body_font_size":15
+        },
+        "generate_menu_plus_settings":{
+            "mobile_header":"enable",
+            "mobile_header_sticky":"enable",
+            "slideout_menu":"false",
+            "slideout_menu_side":"right",
+            "slideout_close_button":"inside"
+        }
+    },
+    "wp":{
+        "blogdescription":"",
+        "permalink_structure":"/%postname%/",
+        "default_comment_status":"closed",
+        "show_avatars":"0",
+        "blog_public":"0",
+		"rg_gforms_enable_html5": "1",
+		"rg_gforms_disable_css": "1"
+    }
+}

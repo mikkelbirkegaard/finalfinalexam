@@ -1,0 +1,26 @@
+@import 'import/_vars';
+@import 'import/_mixin';
+
+a.bbh-btn{
+	@include bbhbtn;
+}
+
+[style*="color: #fefefe"],[style*="color: #ffffff"]{
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4)
+}
+
+span[style*="underline"], u{
+	position: relative;
+	z-index: 1;
+	text-decoration: none !important;
+	&::after{
+		content: "";
+		height: .32em;
+		background-color: $colorSand;
+		width: 100%;
+		bottom: .0em;
+		left:0;
+		position: absolute;
+		z-index: -1;
+	}
+}

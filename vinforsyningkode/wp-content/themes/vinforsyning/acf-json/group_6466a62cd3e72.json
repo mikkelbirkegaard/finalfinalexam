@@ -1,0 +1,45 @@
+{
+    "key": "group_6466a62cd3e72",
+    "title": "Artikel teaser",
+    "fields": [
+        {
+            "key": "field_6466a631a772c",
+            "label": "Artikel teaser",
+            "name": "article_teaser",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Vigtigt!\r\n\r\nSkriv en kort men fængende teaser tekst det er den tekst som bliver vist andre steder på siden.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1684448985
+}

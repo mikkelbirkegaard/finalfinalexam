@@ -1,0 +1,103 @@
+/*===============================================
+= mikkel christiansen has made changes to the footer           =
+===============================================*/
+footer {
+    p {
+        margin-bottom: 1em;
+    }
+
+    .footer-widgets {
+        padding: 0;
+        background-color: $colorsLightSandNew;
+
+        .footer-widgets-container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .inside-footer-widgets {
+            //padding-left: 40px;
+            //padding-right: 40px;
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background-color: $colorsLightSandNew;
+        }
+    }
+
+    .widget-title::after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: currentColor;
+        clear: both;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .widget.widget_nav_menu {
+        li {
+            padding-bottom: 0;
+            margin-bottom: 1em;
+        }
+
+        a[target="_blank"] {
+            &::before {
+                @include icomoon;
+                content: "\e91f";
+                margin-right: 8px;
+                display: inline-block;
+                font-size: 15px;
+                line-height: 15px;
+            }
+        }
+    }
+}
+
+.footer-bottom-bar {
+    background-color: $colorsLightSandNew;
+
+    .flex-footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: solid 1px $colorBlack;
+
+        &::before {
+            content: none !important;
+        }
+
+        &::after {
+            content: none !important;
+        }
+
+        .menu {
+            list-style: none;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-left: 0;
+
+            li {
+                display: inline-block;
+                margin: 8px 20px;
+            }
+
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+// this classname is added in the text widget in the adjust panel
+
+.in-text-wordpress-icon-styling {
+    display: flex;
+    gap: 10px;
+}
+
+.company-label {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+    }
+}

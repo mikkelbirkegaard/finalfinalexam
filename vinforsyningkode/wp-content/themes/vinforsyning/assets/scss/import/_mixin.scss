@@ -1,0 +1,487 @@
+/*==============================
+=            mixins            =
+==============================*/
+/*=============================================
+          = Before element overlay =
+===============================================*/
+@mixin before-overlay($color: black, $opacity: 1) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        opacity: $opacity;
+        z-index: 0;
+    }
+}
+/*=============================================
+          = btn =
+===============================================*/
+@mixin bbhbtn($reverse: false) {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    color: $colorWhite;
+    border: 2px solid $colorRed;
+    font-weight: 700;
+    padding: 9px 0;
+    text-decoration: none;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+    background-color: $colorRed;
+    cursor: pointer;
+
+    &.secondary-btn {
+        background-color: transparent;
+    }
+
+    &:hover {
+        background-color: lighten($colorRed, $amount: 5);
+
+        .icon {
+            transform: rotate(45deg);
+        }
+    }
+
+    & + & {
+        //margin-left: 1.5em;
+        &[data-mce-selected] {
+            //margin-left: 1.5em !important;
+        }
+    }
+
+    &[data-mce-selected] {
+        padding: 20px 25px !important;
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+        color: $colorWhite;
+    }
+
+    &::-moz-selection {
+        background-color: transparent !important;
+    }
+
+    &::-moz-selection,
+    &::selection {
+        background-color: transparent !important;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -36px;
+        left: -100px;
+        background: white;
+        width: 50px;
+        height: 125px;
+        opacity: 15%;
+        transform: rotate(-45deg);
+    }
+
+    &:hover:before {
+        left: 120%;
+        transition: all 1000ms cubic-bezier(0.3, 1, 0.2, 1);
+        -webkit-transition: all 1000ms cubic-bezier(0.3, 1, 0.2, 1);
+    }
+
+    .icon {
+        font-size: 12px;
+        transition: all 300ms cubic-bezier(0.3, 1, 0.2, 1);
+        -webkit-transition: all 300ms cubic-bezier(0.3, 1, 0.2, 1);
+    }
+}
+@mixin icomoon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*----------  Theme colors  ----------*/
+@mixin regularThemes {
+    &.white-theme {
+        background-color: $colorWhite;
+    }
+
+    &.lightgrey-theme {
+        background-color: $colorGrayLight;
+    }
+
+    &.gray-theme,
+    &.grey-theme {
+        background-color: $colorGray;
+    }
+
+    &.black-theme {
+        background-color: $colorBlack;
+
+        .inside-content {
+            color: $colorWhite !important;
+        }
+    }
+
+    &.sand-theme {
+        background-color: $colorSand;
+    }
+
+    &.brown-theme {
+        background-color: $colorBrown;
+
+        .inside-content {
+            color: $colorWhite !important;
+        }
+    }
+
+    &.brown-dark-theme {
+        background-color: $colorBrownDark;
+
+        .inside-content {
+            color: $colorWhite !important;
+        }
+    }
+}
+/*----------  content color  ----------*/
+@mixin contentColor {
+    .black-theme & {
+        color: $colorWhite;
+    }
+
+    .blue-theme & {
+        color: $colorWhite;
+    }
+
+    .darkblue-theme & {
+        color: $colorWhite;
+    }
+}
+/*----------  clearfix  ----------*/
+@mixin clearfix($before: "") {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @if ($before == true) {
+        &::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}
+/*----------  Background cover  ----------*/
+@mixin cover {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/*----------- Arrows -----------*/
+@mixin arrow-before($fontsize: "", $hover: "true") {
+    &::before {
+        @include icomoon;
+        content: "\e914";
+        margin-right: 0.8em;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        transition: 0.15s ease-out;
+        display: inline-block;
+        line-height: inherit;
+        @if ($fontsize != "") {
+            font-size: $fontsize;
+        }
+    }
+    @if ($hover == "true") {
+        &:hover::before {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+    }
+}
+@mixin arrow-after($fontsize: "", $hover: "true") {
+    &::after {
+        @include icomoon;
+        content: "\e914";
+        margin-left: 0.8em;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        transition: 0.15s ease-out;
+        display: inline-block;
+        line-height: inherit;
+        @if ($fontsize != "") {
+            font-size: $fontsize;
+        }
+    }
+    @if ($hover == "true") {
+        &:hover::after {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+    }
+}
+/*----------  Col classes  ----------*/
+@mixin col($padding: "", $size: "") {
+    display: inline-block;
+    box-sizing: border-box;
+    min-height: 1px;
+    float: left;
+    position: relative;
+    @if ($padding != "") {
+        padding-left: $padding;
+        padding-right: $padding;
+    } @else {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @if ($size != "") {
+        width: ($size / 12) * 100%;
+    }
+}
+/*----------  animation duration and delay  ----------*/
+@mixin animationSettings($duration, $delay, $forward: "") {
+    -webkit-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    @if ($forward == true) {
+        -webkit-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+    }
+}
+/*----------  Easy media query  ----------*/
+@mixin mq($width, $type: min) {
+    @media only screen and (#{$type}-width: $width) {
+        @content;
+    }
+}
+/*----------- Woocommerce archive grid -----------*/
+@mixin woo-grid($min: 0px, $max: 9999px, $cols: 3, $class: "") {
+    @media only screen and (min-width: $min) and (max-width: $max) {
+        #{$class},
+        body.woocommerce {
+            ul.products[class*="columns"] li.product {
+                width: (100% / $cols) - 2%;
+                float: left !important;
+                clear: none;
+                margin-right: 2%;
+
+                &:nth-of-type(#{$cols}n + #{$cols}) {
+                    float: right;
+                    clear: right;
+                }
+
+                &:nth-of-type(#{$cols}n + 1) {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+/*----------  input placeholders  ----------*/
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+/*----------- Selection pseudo selector -----------*/
+@mixin selection {
+    &::selection {
+        @content;
+    }
+
+    &::-moz-selection {
+        @content;
+    }
+}
+/*----------  Center absolute  ----------*/
+@mixin center($position) {
+    position: absolute;
+
+    @if $position == "vertical" {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    } @else 
+    if $position == "horizontal" {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%);
+    } @else 
+    if $position == "both" {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+/*----------  text truncate / ellipses after text  ----------*/
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*===================================
+=            Burger sass            =
+===================================*/
+// Burger parts
+//
+// (---) top    -> &::before
+// [---] middle -> &
+// (---) bottom -> &::after
+// Vendor prefixes
+$sass-burger-add-vendor-prefixes: true !default; // Burger
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: 0.3s) {
+    $burger-height: $height;
+    $burger-gutter: $gutter;
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+    @if $sass-burger-add-vendor-prefixes {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    user-select: none;
+    // 1. Fixes jagged edges in Firefox, see issue #10.
+    &,
+    &::after,
+    &::before {
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        outline: 1px solid transparent; // 1
+        @if $border-radius != 0 {
+            border-radius: $border-radius;
+        }
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-property: background-color, -webkit-transform;
+            -moz-transition-property: background-color, -moz-transform;
+            -o-transition-property: background-color, -o-transform;
+        }
+        transition-property: background-color, transform;
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-duration: $transition-duration;
+            -moz-transition-duration: $transition-duration;
+            -o-transition-duration: $transition-duration;
+        }
+        transition-duration: $transition-duration;
+    }
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+    }
+
+    &::before {
+        top: -($height + $gutter);
+    }
+
+    &::after {
+        top: $height + $gutter;
+    }
+}
+// Select parts of the burger
+@mixin burger-parts {
+    &,
+    &::after,
+    &::before {
+        @content;
+    }
+}
+@mixin burger-top {
+    &::before {
+        @content;
+    }
+}
+@mixin burger-middle {
+    & {
+        @content;
+    }
+}
+@mixin burger-bottom {
+    &::after {
+        @content;
+    }
+}
+// Burger animations
+@mixin burger-to-cross($color: auto) {
+    & {
+        background-color: transparent;
+    }
+    @if ($color != auto) {
+        &::after,
+        &::before {
+            background-color: $color;
+        }
+    }
+
+    &::before {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        }
+        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+    }
+
+    &::after {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        }
+        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+    }
+}

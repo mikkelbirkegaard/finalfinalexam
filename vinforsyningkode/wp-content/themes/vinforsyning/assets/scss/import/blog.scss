@@ -1,0 +1,437 @@
+/*=============================================
+          = Blog archive =
+===============================================*/
+body.archive.category,
+body.blog {
+	#page {
+		margin-bottom: 100px;
+		padding: 0;
+	}
+
+	.page-header {
+		margin-top: 80px;
+		margin-bottom: 80px;
+
+		h1 {
+			font-size: 80px;
+		}
+	}
+}
+/*=============================================
+          = Single post =
+		  made by mikkel christiansen
+===============================================*/
+body.single-post {
+	#page {
+		padding: 0;
+		width: 100% !important;
+		max-width: 100%;
+		position: relative;
+	}
+}
+
+.article-content-wrapper {
+	.article-section:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+// sections
+
+.article-section.article-text {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 840px;
+
+	&:not(.white-theme) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		position: relative;
+	}
+
+	.grid-container {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		.content {}
+	}
+}
+
+.article-section.article-video {
+	.image-wrap {
+		position: relative;
+	}
+
+	.video-trigger {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		color: $colorWhite;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		cursor: pointer;
+		transition: background-color 200ms ease-out;
+		background-color: transparent;
+
+		&::before {
+			@include icomoon;
+			content: "\e812";
+			opacity: 0.8;
+			font-size: 80px;
+			display: inline-block;
+		}
+
+		&:hover {
+			background-color: rgba($colorBlack, .5);
+		}
+	}
+
+	.image-el {
+		width: 100%;
+		padding-bottom: 50%;
+		@include cover;
+	}
+}
+
+.article-section.article-gallery {
+	.gallery-image {
+		@include cover;
+		padding-bottom: 80%;
+	}
+
+	.gallery-col {
+		box-sizing: border-box;
+		float: left;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 30px;
+	}
+
+	.gallery {
+		@include clearfix;
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-bottom: 0;
+
+		&.cols-1 .gallery-col {
+			width: 100%;
+		}
+
+		&.cols-2 .gallery-col {
+			width: 50%;
+		}
+
+		&.cols-3 .gallery-col {
+			width: 33.33%;
+		}
+
+		&.cols-4 .gallery-col {
+			width: 25%;
+		}
+	}
+
+	.slick-dots {
+		width: 100%;
+		margin-left: 0;
+		text-align: center;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			font-size: 0;
+			background-color: $colorBrown;
+			border-radius: 100%;
+			width: 16px;
+			height: 16px;
+			box-sizing: border-box;
+			opacity: 0.8;
+			margin-left: 8px;
+			margin-right: 8px;
+			cursor: pointer;
+
+			&.slick-active {
+				opacity: 1;
+			}
+
+			button {
+				font-size: 0;
+				opacity: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.mobile-img {
+		display: none;
+	}
+}
+/*----------- ARTICLE IMAGES --------------*/
+.article-images {
+	// padding-bottom: 50px;
+	.article-image-container {
+		display: grid;
+		// grid-gap: 40px;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	}
+}
+/*===============================================
+=       made by mikkel christiansen            =
+===============================================*/
+.article-hero-section {
+	margin-top: 70px;
+
+	.article-hero-content {
+		.image-or-video {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				max-height: calc(300px + 15vh);
+				object-fit: cover;
+			}
+
+			video {
+				width: 100%;
+				height: 100%;
+				max-height: calc(300px + 15vh);
+				object-fit: cover;
+			}
+		}
+
+		.title-and-btn {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 30px;
+			padding-bottom: 60px;
+			border-bottom: 1px solid $colorsBorderGrey;
+
+			h2 {
+				margin: 0;
+			}
+
+			.btn {
+				@include bbhbtn;
+				background-color: transparent;
+				color: $colorRed;
+				width: 200px;
+				display: flex;
+				align-items: center;
+
+				p {
+					margin: 0;
+					font-weight: 600;
+				}
+
+				.icon-play1:before {
+					content: "\e94c";
+					color: $colorRed;
+					font-size: 15px;
+				}
+
+				&:hover {
+					.icon-play1:before {
+						content: "\e94c";
+						color: $colorWhite;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.video-overlay-article {
+		display: none;
+		position: fixed;
+		background-color: rgba(0,0,0,.6);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 999999;
+		overscroll-behavior: contain;
+
+		.videocontainer {
+			position: fixed;
+			z-index: 999999;
+			background-color: #F9F7F6;
+			top: 12%;
+			bottom: 12%;
+			left: 12%;
+			right: 12%;
+
+			.video-popup {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.close {
+				background-color: $colorsandNew;
+				padding: 15px;
+				border-radius: 100%;
+			}
+		}
+	}
+}
+/*===============================================
+=          quote            =
+===============================================*/
+.article-quote {
+	margin-top: -70px;
+	margin-bottom: -70px;
+
+	p {
+		font-family: $quotes;
+		font-size: 30px;
+		font-weight: 700;
+		text-align: center;
+		max-width: 35ch;
+		margin-left: auto;
+		margin-right: auto;
+		color: $colorRed;
+	}
+}
+/*===============================================
+=          employee list          =
+===============================================*/
+.article-employee {
+	margin-bottom: 100px;
+
+	.employee-flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.content {
+			h3 {
+				font-size: 32px;
+				max-width: 15ch;
+				font-weight: 700;
+				margin-bottom: 30px;
+			}
+
+			.bbh-btn {
+				max-width: 200px;
+
+				.btn-white {
+					margin: 0;
+				}
+			}
+		}
+
+		.employee-list {
+			display: flex;
+			gap: 50px;
+
+			.employee-meta {
+				font-size: 14px;
+				max-width: 25ch;
+				word-break: break-all;
+			}
+
+			.employee-card {
+				width: 150px;
+			}
+		}
+	}
+}
+
+.article-section {
+	max-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*===============================================
+=          become costomer           =
+===============================================*/
+.article-become-costomer {
+	background-color: $colorsLightSandNew;
+	padding-top: 60px;
+	padding-bottom: 75px;
+
+	.become-costomer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h3 {
+			font-size: 32px;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+}
+/*===============================================
+=          post page styling           =
+===============================================*/
+.archive-post-list {
+	.archive-post {
+		position: relative;
+		width: 50%;
+		box-sizing: border-box;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 60px;
+		display: inline-flex;
+		height: auto;
+
+		.inside-archive-post {
+			position: relative;
+			margin-top: 40px;
+			margin-left: 40px;
+			background-color: $colorGray;
+			flex-grow: 1;
+			width: auto;
+		}
+
+		.image-placeholder,
+		.post-image {
+			padding-bottom: 86.66%;
+			@include cover;
+			position: relative;
+			top: -40px;
+			left: -40px;
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-top: 0;
+			box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.16);
+		}
+
+		.image-placeholder {
+			background-color: $colorGray;
+		}
+
+		.post-content-wrap {
+			padding: 0 40px 40px;
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+
+		.read-more {
+			display: flex;
+			align-items: flex-end;
+			@include arrow-before(13px, true);
+			font-weight: 800;
+		}
+	}
+}
+/*===============================================
+=          bnt in text            =
+===============================================*/
+.article-btn-wrapper {
+	padding-top: 0 !important;
+}

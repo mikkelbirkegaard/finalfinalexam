@@ -1,0 +1,650 @@
+/*===============================================
+=                   General                    =
+===============================================*/
+.page-template-PageWithoutHeaderFooter,
+.page-template-vinskolen_registrer_user,
+.single-vinskolen,
+.single-vinforslag-til-mad,
+.single-mini-lex,
+.post-type-archive-vinforslag-til-mad,
+.post-type-archive-mini-lex,
+.page-template-Edit_user_template {
+  header,
+  footer,
+  #fixed-header,
+  .footer-bottom-bar,
+  .sleeknote-anchor {
+    display: none !important;
+  }
+}
+
+.page-template-PageWithoutHeaderFooter,
+.page-template-vinskolen_registrer_user,
+.post-type-archive-vinforslag-til-mad,
+.post-type-archive-mini-lex,
+.single-vinforslag-til-mad,
+.single-mini-lex,
+.single-vinskolen,
+.page-template-Edit_user_template {
+  #page {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/*===============================================
+=                  Vinforslag                   =
+===============================================*/
+.vinskolen-sub-all {
+  .grid-container {
+    padding: 0 !important;
+
+    .row {
+      margin: 0 !important;
+      .col-sm-12 {
+        padding: 0;
+        .vinskolen-sub-container {
+          .vinskolen-sub-letter {
+            background-color: $colorAlert;
+            color: $colorWhite;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 25px;
+            position: sticky;
+            top: 103px;
+            p {
+              margin-bottom: 0;
+            }
+          }
+          .vinskolen-sub-single {
+            display: flex;
+            flex-direction: column;
+            padding: 8px 25px;
+            border-bottom: 0.5px solid #a0a0a0;
+            p {
+              margin-bottom: 0;
+              font-size: 16px;
+              a {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .arrow-right {
+                  content: url("/wp-content/themes/vinforsyning/assets/images/right.svg");
+                }
+              }
+            }
+          }
+        }
+        .search-wrap {
+          padding: 25px;
+          padding-top: 0;
+          input {
+            position: relative;
+
+            width: 100%;
+            box-shadow: 1px 1px 10px #00000029;
+            border: 1px solid #707070;
+            border-radius: 26px;
+            padding: 16px;
+            background-image: url(/wp-content/uploads/2022/05/search-icon.svg);
+            background-position: 10px center;
+            background-repeat: no-repeat;
+
+            text-indent: 20px;
+
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 2s;
+            transition: all 0.2s;
+          }
+        }
+        .no-matches-found {
+          padding: 0 25px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/*===============================================
+=              wineschool-header               =
+===============================================*/
+
+.wineschool-header {
+  background-color: #bfb0a3;
+  margin-bottom: 30px;
+  position: sticky;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  .grid-container {
+    .row {
+      .col-sm-12 {
+        .wineschool-top-header {
+          text-align: center;
+          position: relative;
+          padding: 40px 0;
+
+          h1 {
+            margin-bottom: 0;
+            font-size: 20px;
+          }
+          .backLink-img {
+            min-width: 36px;
+            position: absolute;
+            width: 100%;
+            display: flex;
+
+            align-items: flex-end;
+
+            .backLink-wineschool {
+              position: absolute;
+              left: 0;
+              font-size: 18px;
+              display: flex;
+              align-items: center;
+              .arrow-left {
+                content: url("/wp-content/themes/vinforsyning/assets/images/left.svg");
+                padding-right: 10px;
+              }
+            }
+            .edit-profile {
+              position: absolute;
+              right: 0;
+              width: 34px;
+              height: 34px;
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bbh-frontend-email-repeater {
+    display: none;
+  }
+}
+/*===============================================
+=               wineschool-body                =
+===============================================*/
+.wineschool-body {
+  margin-bottom: 50px;
+  .grid-container {
+    .row {
+      .col-sm-12 {
+        .cat-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+          .cat-box {
+            width: 100%;
+            box-shadow: 1px 1px 10px #00000029;
+
+            .image {
+              display: flex;
+              justify-content: center;
+              padding: 27px 0;
+              img {
+                max-height: 68px;
+                object-position: center;
+              }
+            }
+            .text {
+              padding: 15px;
+
+              h4 {
+                font-size: 19px;
+                margin-bottom: 0;
+                text-align: center;
+              }
+            }
+            &:hover {
+              border: 1px solid $colorAlert;
+            }
+          }
+        }
+        .settings-btns {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .bbh-btn {
+            margin: 10px 0;
+            width: 185px;
+            text-align: center;
+            // width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===============================================
+=           wineschool-single-header            =
+===============================================*/
+
+.wineschool-single-header {
+  padding-bottom: 50px;
+  .grid-container {
+    padding: 10px !important;
+    .row {
+      margin: 0 !important;
+
+      &.row-wineschool-headline {
+        padding-top: 0;
+      }
+      .col-sm-12 {
+        .wineschool-product-header {
+          padding-top: 25px;
+          padding-bottom: 25px;
+          display: flex;
+          border-bottom: 1px solid #af3e3e;
+          .img-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            width: 25%;
+            img {
+              display: flex;
+              max-height: 177px;
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          .p-text {
+            width: 75%;
+            padding-left: 33px;
+
+            h1 {
+              font-size: 18px;
+            }
+            p {
+              margin-bottom: 5px;
+              .meta-title {
+                font-weight: bold;
+                font-weight: 15px;
+              }
+              .meta-val {
+                font-weight: 15px;
+                img {
+                  width: 24px;
+                  vertical-align: middle;
+                  margin-left: 0.4em;
+                }
+              }
+            }
+          }
+        }
+        .text-headline {
+          padding-top: 25px;
+        }
+        .text-container {
+          border-bottom: 1px solid #af3e3e;
+
+          font-size: 15px;
+          .addReadMore.showlesscontent .SecSec,
+          .addReadMore.showlesscontent .readLess {
+            display: none;
+          }
+
+          .addReadMore.showmorecontent .readMore {
+            display: none;
+            .arrow-down {
+            }
+          }
+
+          .addReadMore .readMore,
+          .addReadMore .readLess {
+            .linkText {
+              text-decoration: underline;
+              font-weight: bold;
+              color: $colorAlert;
+              cursor: pointer;
+              &::after {
+                content: url("/wp-content/themes/vinforsyning/assets/images/down.svg");
+              }
+            }
+          }
+
+          .addReadMoreWrapTxt.showmorecontent .SecSec,
+          .addReadMoreWrapTxt.showmorecontent .readLess {
+            display: block;
+          }
+          .text {
+            padding-bottom: 25px;
+          }
+          .readMoreLink {
+            display: none;
+            padding-bottom: 25px;
+            #linkText {
+              text-decoration: underline;
+              font-weight: bold;
+              color: $colorAlert;
+            }
+            .arrow-down {
+              content: url("/wp-content/themes/vinforsyning/assets/images/down.svg");
+            }
+          }
+        }
+        .product-meta.product-sidebar-box {
+          padding-top: 25px;
+          p {
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+          .meta-title {
+            font-weight: bold;
+          }
+          .product-country {
+            .meta-val {
+              img {
+                width: 24px;
+                vertical-align: middle;
+                margin-left: 0.4em;
+              }
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+  &.single-producent {
+    .row {
+      margin: 0 !important;
+
+      &.row-wineschool-headline {
+        padding-top: 0;
+      }
+      .col-sm-12 {
+        .wineschool-product-header {
+          padding-top: 0;
+          padding-bottom: 0;
+          display: flex;
+          border-bottom: 1px solid #af3e3e;
+
+          .p-text {
+            padding: 0;
+            width: 100%;
+            h1 {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .img-container {
+        margin-bottom: 20px;
+        img {
+          max-height: 200px;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        video {
+          max-height: 200px;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        margin-bottom: 20px;
+      }
+      .text2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*===============================================
+=               wineschool-login                =
+===============================================*/
+.wineschool-login {
+  height: calc(100vh - 134px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .grid-container {
+    .row {
+      .col-sm-12 {
+        .login-box {
+          padding: 50px;
+          border: 1px solid $colorGray;
+          box-shadow: 1px 1px 10px #00000029;
+          h2 {
+            margin-bottom: 50px;
+            text-align: center;
+          }
+          #loginform {
+            .login-username,
+            .login-password {
+              display: flex;
+              flex-direction: column;
+              input {
+                border: 2px solid $colorGray;
+                max-width: 430px;
+                width: 100%;
+              }
+            }
+            .login-submit {
+              input {
+                @include bbhbtn;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===============================================
+=           wineschool-edit-profile            =
+===============================================*/
+.wineschool-edit-profile {
+  margin-bottom: 50px;
+  .grid-container {
+    .row {
+      .col-sm-12 {
+        .single-link {
+          display: flex;
+          justify-content: center;
+          .logout-btn {
+            @include bbhbtn;
+          }
+        }
+        .edit-info {
+          table {
+            border: none;
+            tr {
+              border: none;
+              td {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                margin: 0 auto;
+                input {
+                  border: 2px solid $colorGray;
+                  width: fit-content;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-template-Edit_user_template {
+  #bbh-frontend-email-repeater {
+    display: none;
+  }
+  legend {
+    padding-top: 30px;
+    margin: 20px auto;
+  }
+  .woocommerce-form-row {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    input {
+      border: 2px solid $colorGray;
+      width: 430px;
+    }
+  }
+  .btns-fields-wineschool-edit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .woocommerce-Button.button {
+      @include bbhbtn;
+      text-align: center;
+    }
+  }
+}
+
+/*===============================================
+=             wineschool-registrer              =
+===============================================*/
+.admin-bar {
+  .wineschool-registrer {
+    height: calc(100vh - 166px);
+  }
+}
+.wineschool-registrer {
+  height: calc(100vh - 134px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .registration-comlplate {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+  }
+  .grid-container {
+    .row {
+      .col-sm-12 {
+        display: flex;
+        justify-content: center;
+        .registrer-container {
+          padding: 50px;
+          border: 1px solid $colorGray;
+          box-shadow: 1px 1px 10px #00000029;
+          .activation-group {
+            margin-top: 20px;
+          }
+          input {
+            border: 2px solid $colorGray;
+            width: 430px;
+          }
+          .bbh-btn {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===============================================
+=                  winecard                   =
+===============================================*/
+.winecard {
+  .grid-container {
+    .winecard-unavailable {
+      .unavailable-headline-box {
+        width: 200px;
+        height: 38px;
+        background-color: $colorGrayLight;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
+      .unavailable-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-gap: 60px;
+        max-width: 100%;
+        .box {
+          background-color: $colorGrayLight;
+          // box-shadow: 0 0 5px rgb(0 0 0 / 16%);
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          width: 100%;
+          height: 300px;
+          justify-content: flex-end;
+          padding: 0 10px;
+          .box-text-1 {
+            width: 30%;
+            height: 30px;
+            background-color: #b1afad;
+            margin-bottom: 20px;
+          }
+          .box-text-2 {
+            width: 50%;
+            height: 30px;
+            background-color: #b1afad;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-Smartphone (iphone 5: portrait) 1050px*/
+@media screen and (max-width: 1050px) {
+  .winecard {
+    .grid-container {
+      .winecard-unavailable {
+        .unavailable-headline-box {
+        }
+        .unavailable-grid {
+          grid-template-columns: repeat(3, 1fr);
+          // grid-gap: 30px;
+          .box {
+            .box-text-1 {
+            }
+            .box-text-2 {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//1050 end
+/*-Smartphone (iphone 5: portrait) 640px*/
+@media screen and (max-width: 640px) {
+  .winecard {
+    .grid-container {
+      .winecard-unavailable {
+        .unavailable-headline-box {
+        }
+        .unavailable-grid {
+          grid-template-columns: repeat(2, 1fr);
+          // grid-gap: 30px;
+          .box {
+            .box-text-1 {
+            }
+            .box-text-2 {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//640 end

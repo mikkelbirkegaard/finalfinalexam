@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.eot?7rjfv3');
+  src:  url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.eot?7rjfv3#iefix') format('embedded-opentype'),
+    url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.woff2?7rjfv3') format('woff2'),
+    url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.ttf?7rjfv3') format('truetype'),
+    url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.woff?7rjfv3') format('woff'),
+    url('https://i.icomoon.io/public/e9bd5dc1f6/stjyskVinforsyning/icomoon.svg?7rjfv3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tidligerekob2:before {
+  content: "\e945";
+}
+.icon-tidligerekob1 .path1:before {
+  content: "\e941";
+  color: rgb(1, 1, 1);
+}
+.icon-tidligerekob1 .path2:before {
+  content: "\e942";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+}
+.icon-tidligerekob1 .path3:before {
+  content: "\e943";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+  opacity: 0.94;
+}
+.icon-tidligerekob1 .path4:before {
+  content: "\e944";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+}
+.icon-dine-reservationer:before {
+  content: "\e940";
+}
+.icon-tidligerekob .path1:before {
+  content: "\e936";
+  color: rgb(1, 1, 1);
+}
+.icon-tidligerekob .path2:before {
+  content: "\e937";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+}
+.icon-tidligerekob .path3:before {
+  content: "\e938";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+  opacity: 0.94;
+}
+.icon-tidligerekob .path4:before {
+  content: "\e939";
+  margin-left: -0.9716796875em;
+  color: rgb(1, 1, 1);
+}
+.icon-fakturarer:before {
+  content: "\e93a";
+}
+.icon-checkout1:before {
+  content: "\e93b";
+}
+.icon-adresser:before {
+  content: "\e93c";
+}
+.icon-fri-fragt:before {
+  content: "\e93d";
+}
+.icon-fri-fragt1:before {
+  content: "\e93e";
+}
+.icon-ur:before {
+  content: "\e93f";
+}
+.icon-download:before {
+  content: "\e935";
+}
+.icon-volume-medium:before {
+  content: "\e933";
+}
+.icon-volume-mute:before {
+  content: "\e934";
+}
+.icon-madpiktogram_Trte:before {
+  content: "\e900";
+}
+.icon-madpiktogram_Skaldyr:before {
+  content: "\e901";
+}
+.icon-madpiktogram_Salat:before {
+  content: "\e902";
+}
+.icon-madpiktogram_Pizza:before {
+  content: "\e903";
+}
+.icon-madpiktogram_Pasta:before {
+  content: "\e904";
+}
+.icon-madpiktogram_Orientalsk:before {
+  content: "\e905";
+}
+.icon-madpiktogram_Okse:before {
+  content: "\e906";
+}
+.icon-madpiktogram_Lam:before {
+  content: "\e907";
+}
+.icon-madpiktogram_Kylling:before {
+  content: "\e908";
+}
+.icon-madpiktogram_Kalv:before {
+  content: "\e909";
+}
+.icon-madpiktogram_Kaffe:before {
+  content: "\e90a";
+}
+.icon-madpiktogram_Is:before {
+  content: "\e90b";
+}
+.icon-madpiktogram_Gryderet:before {
+  content: "\e90c";
+}
+.icon-madpiktogram_Gris:before {
+  content: "\e90d";
+}
+.icon-madpiktogram_Fuglevildt:before {
+  content: "\e90e";
+}
+.icon-madpiktogram_Fisk:before {
+  content: "\e90f";
+}
+.icon-madpiktogram_Dessert:before {
+  content: "\e910";
+}
+.icon-min-konto:before {
+  content: "\e911";
+}
+.icon-noegle:before {
+  content: "\e912";
+}
+.icon-oekonomi:before {
+  content: "\e913";
+}
+.icon-pil-hoejre:before {
+  content: "\e914";
+}
+.icon-pil-op:before {
+  content: "\e915";
+}
+.icon-play:before {
+  content: "\e916";
+}
+.icon-pose:before {
+  content: "\e917";
+}
+.icon-produktkatalog:before {
+  content: "\e918";
+}
+.icon-rette-loesning:before {
+  content: "\e919";
+}
+.icon-skraeddersyet:before {
+  content: "\e91a";
+}
+.icon-skraldespand:before {
+  content: "\e91b";
+}
+.icon-smagning:before {
+  content: "\e91c";
+}
+.icon-sortiment:before {
+  content: "\e91d";
+}
+.icon-statistik:before {
+  content: "\e91e";
+}
+.icon-stjerne:before {
+  content: "\e91f";
+}
+.icon-vinglas:before {
+  content: "\e920";
+}
+.icon-vinpakker:before {
+  content: "\e921";
+}
+.icon-vinrejser:before {
+  content: "\e922";
+}
+.icon-b2b:before {
+  content: "\e923";
+}
+.icon-baeredygtighed:before {
+  content: "\e924";
+}
+.icon-cirkel:before {
+  content: "\e925";
+}
+.icon-dinner:before {
+  content: "\e926";
+}
+.icon-eksperter:before {
+  content: "\e927";
+}
+.icon-eksport:before {
+  content: "\e928";
+}
+.icon-flaske:before {
+  content: "\e929";
+}
+.icon-fyldt-stjerne:before {
+  content: "\e92a";
+}
+.icon-galleri:before {
+  content: "\e92b";
+}
+.icon-hjaelpe-hele-vejen:before {
+  content: "\e92c";
+}
+.icon-kontodetaljer:before {
+  content: "\e92d";
+}
+.icon-kurv:before {
+  content: "\e92e";
+}
+.icon-leveringsadresse:before {
+  content: "\e92f";
+}
+.icon-links:before {
+  content: "\e930";
+}
+.icon-log-ud:before {
+  content: "\e931";
+}
+.icon-lup:before {
+  content: "\e932";
+}

@@ -1,0 +1,26 @@
+/*COLOR SCHEME*/
+$colorWhite: #fefefe;
+$colorBlack: #000000;
+$colorGray: #D9D8D7;
+$colorGrayDark: #403732;
+$colorGrayLight: #dddddd;
+$colorBrown: #595047;
+$colorBrownDark: #403732;
+$colorBrownLight: #8c837b;
+$colorSand: #BFB0A3;
+$colorRed: #AF3E3E;
+$colorGreen: #5C8E7D;
+$colorAlert: rgb(139, 0, 0);
+$colorWarning: #f6d55c;
+/*NEW COLORS 2023*/
+$colorsandNew: #F9F7F6;
+$colorsLightSandNew: #E2DBD5;
+$colorsBorderGrey: #707070;
+$colorNewBlackGrey: #39302C;
+/* CONTENT VARS */
+$gridContainer: var(--grid-container-width);
+$narrowContainer: calc(var(--grid-container-width) * .6666);
+$sectionPadding: 100px;
+$headingFont: "Merriweather", serif;
+$bodyFont: "Source Sans Pro", sans-serif;
+$quotes: "Playfair Display", serif;

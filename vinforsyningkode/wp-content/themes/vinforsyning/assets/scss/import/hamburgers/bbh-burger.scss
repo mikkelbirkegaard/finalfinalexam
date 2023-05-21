@@ -1,0 +1,20 @@
+/*-Tablet (Orientation: portrait) 768px-*/
+@media screen and (max-width: 1024px) {
+    //Generatepress menu css
+    .main-navigation .menu-toggle {
+       display: block !important;
+    }
+
+    .menu-toggle{
+        line-height: 0;
+    }
+
+    .menu-toggle:before {
+       content: none !important;
+    }
+
+    [class*="nav-float-"] .site-header .inside-header > * {
+       float: none;
+       clear: both;
+    }
+}

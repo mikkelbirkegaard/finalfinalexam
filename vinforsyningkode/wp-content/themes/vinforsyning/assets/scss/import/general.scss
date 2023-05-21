@@ -1,0 +1,510 @@
+#page {
+    background-color: transparent;
+    padding: 40px;
+}
+
+#content {
+    padding: 0;
+}
+
+.grid-container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+body.page.page-template-default {
+    #page {
+        padding: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+#ui-datepicker-div {
+    &.hide-this {
+        visibility: hidden !important;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.bbh-btn {
+    @include bbhbtn;
+}
+/*=============================================
+          = Video player =
+===============================================*/
+.video-container {
+    @include cover;
+    @include clearfix;
+    position: relative;
+
+    &.is-hover {
+        //opacity: 0 !important;
+    }
+
+    &.playing {
+        &.is-hover .play-btn {
+            opacity: 1;
+        }
+
+        .play-btn {
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0);
+
+            &::before {
+                //content: "\e929";
+                content: ".";
+                text-indent: -9999px;
+                width: 15px;
+                border-right: 15px solid;
+                border-left: 15px solid;
+                font-size: 60px;
+            }
+        }
+    }
+
+    &.show-video {
+        .mute-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        video {
+            opacity: 1;
+        }
+    }
+
+    &.muted {
+        .mute-btn::before {
+            content: "\e934";
+        }
+    }
+
+    &.is-hover .play-btn {
+        background-color: rgba($colorBlack, 0.5);
+    }
+
+    video {
+        opacity: 0;
+        float: left;
+        max-width: 100%;
+        transition: opacity 200ms ease-out;
+    }
+
+    .mute-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: rgba($colorWhite, 0.8);
+        padding: 10px;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 30px;
+        transition: opacity 200ms ease-out;
+        pointer-events: none;
+        z-index: 5;
+
+        &::before {
+            @include icomoon;
+            content: "\e933";
+        }
+    }
+
+    .play-btn {
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transition: opacity 200ms ease-out, background-color 200ms ease-out;
+        background-color: rgba(0, 0, 0, 0);
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 4;
+
+        &::before {
+            @include icomoon;
+            font-size: 90px;
+            content: "\e916";
+            color: rgba($colorWhite, 0.8);
+        }
+    }
+}
+/*========================================
+=                404 page                =
+========================================*/
+/*-------------- 404 -------------*/
+.error404 #primary {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+/*-------------- 404 btn -------------*/
+.btn-404 {
+    display: inline-block;
+    padding: 14px 25px;
+    min-width: 150px;
+    box-sizing: border-box;
+    background-color: black !important;
+    color: #fefefe !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s ease-out;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 50px;
+}
+//Setting page-template-default to 100% width, since we're using Flexible Content in this template.
+
+body.page-template-default.page #page {
+    max-width: 100%;
+    width: 100%;
+}
+//Gravityform honeypot
+
+.gform_validation_container {
+    display: none !important;
+    position: absolute !important;
+    left: -9000px;
+}
+/*=============================================
+          = Video modal =
+===============================================*/
+#bbh-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    display: none;
+
+    .bbh-modal-box {
+        position: fixed;
+        background-color: $colorWhite;
+        z-index: 9998;
+        width: 1080px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    .close {
+        position: absolute;
+        padding: 10px;
+        color: $colorWhite;
+        cursor: pointer;
+        right: -10px;
+        top: 0;
+        font-size: 20px;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    &--overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9997;
+        background-color: rgba($colorBlack, 0.7);
+    }
+}
+/*=============================================
+          = Login popup =
+===============================================*/
+#login-popup-overlay {
+    background-color: rgba($colorBlack, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+    transition: opacity 200ms ease, visibility 0s linear 200ms;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 400ms ease;
+    }
+}
+
+#login-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    max-width: 90%;
+    width: 700px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 200ms ease, opacity 200ms ease, visibility 0s linear 200ms;
+    background-color: $colorWhite;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+    z-index: 99999;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+        transition: transform 400ms ease, opacity 400ms ease;
+    }
+
+    .subheading {
+        font-family: $bodyFont;
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $colorGray;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    #loginform {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -7px;
+        margin-right: -7px;
+        margin-top: 30px;
+
+        p {
+            display: inline-block;
+            padding-left: 7px;
+            padding-right: 7px;
+            box-sizing: border-box;
+            width: 33.33%;
+        }
+
+        .login-username {
+            label {
+                display: none;
+            }
+        }
+
+        .login-password {
+            label {
+                display: none;
+            }
+        }
+
+        input.input {
+            border-radius: 28px;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid $colorGray;
+            padding: 0 15px;
+            line-height: 48px;
+        }
+
+        .error-message {
+            width: 100%;
+            color: $colorAlert;
+        }
+
+        .button,
+        input[type="submit"] {
+            @include bbhbtn;
+            margin: 0 !important;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .forgot-password {
+        text-align: right;
+        @include clearfix;
+
+        a {
+            display: inline-block;
+            width: 33.33%;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+
+    .signup {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 2px solid $colorGray;
+
+        .signup-text {
+            padding-right: 10px;
+            flex-grow: 1;
+            box-sizing: border-box;
+            width: 100%;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .cta {
+            width: 33.33%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            padding-left: 7px;
+
+            .bbh-btn {
+                margin-right: 0;
+                margin-top: 0;
+                width: 100%;
+                text-align: center;
+                border: 2px solid $colorRed;
+                background-color: $colorWhite;
+                color: $colorBlack;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+/*===============================================
+=          button  global styling       =
+===============================================*/
+.hero-button {
+    display: flex;
+    gap: 20px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.section-button {
+    display: flex;
+
+    p {
+        margin: 0;
+    }
+}
+
+.btn-white {
+    color: $colorWhite;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+        color: $colorWhite;
+    }
+}
+
+.btn-red {
+    color: $colorRed;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $colorWhite;
+    }
+
+    &:visited {
+        color: $colorRed;
+    }
+}
+
+.secondary-btn:hover .btn-red {
+    color: $colorWhite;
+}
+
+.red-btn .icon-arrow:before {
+    content: "\e947";
+    color: $colorRed;
+}
+
+.red-btn:hover .icon-arrow:before {
+    content: "\e947";
+    color: $colorWhite;
+}
+/*===============================================
+=          BBH Global Page Load Spinner           =
+===============================================*/
+.global-page-spinner {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000000;
+
+    .bbh-loader {
+        margin: 0;
+    }
+}
+/*===============================================
+=            Min konto - Vinskolen             =
+===============================================*/
+.vinskolen-grid-headline {
+    p {
+        font-size: 30px;
+        font-family: "Merriweather", serif;
+        text-align: center;
+    }
+}
+
+.acf-field[data-name="vinskolen_headline"] {
+    .acf-input {
+        border: 1px solid #ccd0d4;
+    }
+}
+
+.acf-field[data-name="vinkort_id"] {
+    .acf-input {
+        border: 1px solid #ccd0d4;
+    }
+}
+/*===============================================
+=            margin between section           =
+===============================================*/
+.section-margin {
+    margin-bottom: 150px;
+}

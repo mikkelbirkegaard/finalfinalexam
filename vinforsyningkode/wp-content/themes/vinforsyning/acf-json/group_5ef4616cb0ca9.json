@@ -1,0 +1,92 @@
+{
+    "key": "group_5ef4616cb0ca9",
+    "title": "Footer indhold",
+    "fields": [
+        {
+            "key": "field_5ef461817165c",
+            "label": "col-12",
+            "name": "",
+            "aria-label": "",
+            "type": "column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "column": "1_1",
+            "end_column": 0
+        },
+        {
+            "key": "field_5ef464beb1684",
+            "label": "Footer bund menu",
+            "name": "nav_menu",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Ingen menu",
+                "56": "Brancher",
+                "57": "En del af vinforsyningen (footer)",
+                "58": "Footer bund",
+                "25": "Hovedmenu",
+                "55": "Østjysk Vinforsyning (footer)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64425d62a0a39",
+            "label": "Firma information",
+            "name": "company_information",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1682070965
+}
